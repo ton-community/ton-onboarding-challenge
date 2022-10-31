@@ -1,0 +1,56 @@
+;; default#_ royalty_factor:uint16 royalty_base:uint16 royalty_address:MsgAddress = RoyaltyParams;
+;;
+;; storage#_
+;;  owner_address:MsgAddress next_item_index:uint64
+;;  ^[collection_content:^Cell common_content:^Cell]
+;;  nft_item_code:^Cell
+;;  royalty_params:^RoyaltyParams
+;;  = Storage;
+
+global slice ctx_owner;
+global int ctx_next_item_index;
+global cell ctx_content;
+global cell ctx_nft_item_code;
+global cell ctx_royalty_params;
+global int ctx_pow_complexity;
+global int ctx_last_success;
+global int ctx_seed;
+global int ctx_target_delta;
+global int ctx_min_cpl;
+global int ctx_max_cpl;
+
+
+() load_base_data() impure {
+    var ds = get_data().begin_parse();
+
+    ctx_owner = ds~load_msg_addr();
+    ctx_next_item_index = ds~load_uint(64);
+    ctx_content = ds~load_ref();
+    ctx_nft_item_code = ds~load_ref();
+    ctx_royalty_params = ds~load_ref();
+    ctx_pow_complexity = ds~load_uint(256);
+    ctx_last_success = ds~load_uint(32);
+    ctx_seed = ds~load_uint(128);
+    ctx_target_delta = ds~load_uint(32);
+    ctx_min_cpl = ds~load_uint(8);
+    ctx_max_cpl = ds~load_uint(8);
+
+    ds.end_parse();
+}
+
+() store_base_data() impure {
+    set_data(begin_cell()
+        .store_slice(ctx_owner)
+        .store_uint(ctx_next_item_index, 64)
+        .store_ref(ctx_content)
+        .store_ref(ctx_nft_item_code)
+        .store_ref(ctx_royalty_params)
+        .store_uint(ctx_pow_complexity, 256)
+        .store_uint(ctx_last_success, 32)
+        .store_uint(ctx_seed, 128)
+        .store_uint(ctx_target_delta, 32)
+        .store_uint(ctx_min_cpl, 8)
+        .store_uint(ctx_max_cpl, 8)
+        .end_cell()
+    );
+}
