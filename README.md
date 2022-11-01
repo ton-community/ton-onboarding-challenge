@@ -1,9 +1,9 @@
+# nft-giver
 
-NFT collection with mining functionality is a standard collection contract with some changes: 
+This is a NFT collection that differs from standard NFT collections in the following aspects:
 
-- normal NFT deployment is disabled and one can mint NFT only by mining
-- extra get-function is added for mining info
-
+- normal NFT deployment is disabled and one can mint NFTs only by mining (similar to how PoW givers worked)
+- extra get-method is added for mining info
 
 ### Mining process
 
@@ -11,7 +11,7 @@ In order to mine NFT you should send special **internal** message to collection 
 
 You can get current `pow_complexity` by calling special get-function to get mining status called `get_mining_data`
 
-It returns a tuple with the following data: 
+It returns a [tensor](https://ton.org/docs/#/func/types?id=tensor-types) with the following data: 
 
 ```
 ( 
@@ -26,7 +26,6 @@ It returns a tuple with the following data:
 
 Note that `seed` is set to a random value after every successful NFT mint.
 `pow_complexity` is also a dynamic value and could be changed from time to time.
-
 
 Layout of proof of work Cell:
 
