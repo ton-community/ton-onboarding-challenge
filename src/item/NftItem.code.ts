@@ -2,11 +2,11 @@ import { compileFunc, CompileResult } from "@ton-community/func-js";
 import { readFileSync } from "fs";
 import { Cell } from "ton";
 
-const files = ['stdlib.fc', 'storage.fc', 'op-codes.fc', 'collection.fc'];
+const files = ['stdlib.fc', 'params.fc', 'op-codes.fc', 'item.fc'];
 
 let result: CompileResult | null = null;
 
-export const getNftGiverCompileResult = async () => {
+export const getNftItemCompileResult = async () => {
     if (result !== null) return result;
     const sources: { [key: string]: string } = {};
     for (const f of files) {
@@ -14,17 +14,17 @@ export const getNftGiverCompileResult = async () => {
     }
     result = await compileFunc({
         sources,
-        entryPoints: ['collection.fc'],
+        entryPoints: ['item.fc'],
     });
     return result;
 };
 
 let code: Cell | null = null;
 
-export const getNftGiverCodeCell = async () => {
+export const getNftItemCodeCell = async () => {
     if (code !== null) return code;
 
-    const compileResult = await getNftGiverCompileResult();
+    const compileResult = await getNftItemCompileResult();
     if (compileResult.status === 'error') {
         throw new Error('could not get compile result: ' + compileResult.message);
     }

@@ -1,10 +1,6 @@
 #include "stdlib.fc";
 #include "storage.fc";
-
-const op::get_royalty_params = 0x693d3950;
-const op::report_royalty_params = 0xa8cb00ad;
-const op::mine = 0x4d696e65;
-const op::rescale_complexity = 0x5253636c;
+#include "op-codes.fc";
 
 int ufits(int x, int bits) impure asm "UFITSX";
 
@@ -40,7 +36,7 @@ slice calculate_nft_item_address(int wc, cell state_init) {
         .store_slice(to_address)
         .store_coins(0)
         .store_uint(0, 1 + 4 + 4 + 64 + 32 + 1 + 1)
-        .store_uint(op::report_royalty_params, 32)
+        .store_uint(op::report_royalty_params(), 32)
         .store_uint(query_id, 64)
         .store_slice(data);
     send_raw_message(msg.end_cell(), 64); ;; carry all the remaining value of the inbound message
@@ -116,7 +112,7 @@ slice calculate_nft_item_address(int wc, cell state_init) {
     slice sender_address = cs~load_msg_addr();
     load_base_data();
 
-    if (in_msg_body.preload_uint(32) == op::mine) {
+    if (in_msg_body.preload_uint(32) == op::mine()) {
         mint_nft(in_msg_body);
         return ();
     }
@@ -124,12 +120,12 @@ slice calculate_nft_item_address(int wc, cell state_init) {
     int op = in_msg_body~load_uint(32);
     int query_id = in_msg_body~load_uint(64);
 
-    if (op == op::get_royalty_params) {
+    if (op == op::get_royalty_params()) {
         send_royalty_params(sender_address, query_id, ctx_royalty_params.begin_parse());
         return ();
     }
 
-    if (op == op::rescale_complexity) {
+    if (op == op::rescale_complexity()) {
         rescale_complexity(in_msg_body~load_uint(32));
         return ();
     }
