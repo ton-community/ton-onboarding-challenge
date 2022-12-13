@@ -1,11 +1,18 @@
-# nft-giver
+# TON Onboarding Challenge Boilerplate
+
+Here you can become a true TVM Developer on the most advanced asynchronous blockchain in the world — The Open Network (TON). 
+
+You can prove your talent using the most ancient and essential way in blockchains, starting from grandpa Bitcoin! As the first miners in TON, you will go through the Proof-of-Work smart contract and finally mine a secret reward for your TON wallet.
+
+* Link to the article (TODO)
+
+
+## Mining process (advanced)
 
 This is a NFT collection that differs from standard NFT collections in the following aspects:
 
 - normal NFT deployment is disabled and one can mint NFTs only by mining (similar to how PoW givers worked)
 - extra get-method is added for mining info
-
-### Mining process
 
 In order to mine NFT you should send special **internal** message to collection contract with proof of work.
 
