@@ -18,7 +18,7 @@ In order to mine NFT you should send special **internal** message to collection 
 
 You can get current `pow_complexity` by calling special get-function to get mining status called `get_mining_data`
 
-It returns a [tensor](https://ton.org/docs/#/func/types?id=tensor-types) with the following data: 
+It returns a [tensor](https://ton.org/docs/develop/func/types#tensor-types) with the following data: 
 
 ```
 ( 
