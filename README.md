@@ -4,7 +4,12 @@ Here you can become a true TVM Developer on the most advanced asynchronous block
 
 You can prove your talent using the most ancient and essential way in blockchains, starting from grandpa Bitcoin! As the first miners in TON, you will go through the Proof-of-Work smart contract and finally mine a secret reward for your TON wallet.
 
-* Link to the article (TODO)
+## Step-by-step (simple)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wEEQLwQy30Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+* [TON Onboarding Challenge](https://github.com/ton-society/ton-footsteps/issues/128)
+
 
 
 ## Mining process (advanced)
