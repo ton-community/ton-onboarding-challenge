@@ -4,11 +4,15 @@ Here you can become a true TVM Developer on the most advanced asynchronous block
 
 You can prove your talent using the most ancient and essential way in blockchains, starting from grandpa Bitcoin! As the first miners in TON, you will go through the Proof-of-Work smart contract and finally mine a secret reward for your TON wallet.
 
-- [NFT Collection page on GetGems with True TVM Developers](https://getgems.io/collection/EQDk8N7xM5D669LC2YACrseBJtDyFqwtSPCNhRWXU7kjEptX)
+- [NFT Collection on GetGems with True TVM Developers](https://getgems.io/collection/EQDk8N7xM5D669LC2YACrseBJtDyFqwtSPCNhRWXU7kjEptX)
 
 ## Step-by-step (simple)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wEEQLwQy30Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+### Video Tutorial
+
+[![Watch the video](https://img.youtube.com/vi/wEEQLwQy30Q/0.jpg)](https://youtu.be/wEEQLwQy30Q)
+
+### Text tutorial
 
 * [TON Onboarding Challenge](https://github.com/ton-society/ton-footsteps/issues/128)
 
