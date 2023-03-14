@@ -1,10 +1,15 @@
 # TON Onboarding Challenge Boilerplate
 
-Here you can become a true TVM Developer on the most advanced asynchronous blockchain in the world — The Open Network (TON). 
+Here you can become a true TVM Developer on the most advanced asynchronous blockchain in the world, The Open Network (TON). 
 
 You can prove your talent using the most ancient and essential way in blockchains, starting from grandpa Bitcoin! As the first miners in TON, you will go through the Proof-of-Work smart contract and finally mine a secret reward for your TON wallet.
 
-- [NFT Collection on GetGems with True TVM Developers](https://getgems.io/collection/EQDk8N7xM5D669LC2YACrseBJtDyFqwtSPCNhRWXU7kjEptX)
+## Who already completed the challenge?
+
+NFT Collection on GetGems with True TVM Developers:
+
+- [Mainnet NFT collection](https://getgems.io/collection/EQDk8N7xM5D669LC2YACrseBJtDyFqwtSPCNhRWXU7kjEptX)
+- [Testnet NFT collection](https://testnet.getgems.io/collection/EQDk8N7xM5D669LC2YACrseBJtDyFqwtSPCNhRWXU7kjEptX)
 
 ## Step-by-step (simple)
 
@@ -14,11 +19,13 @@ You can prove your talent using the most ancient and essential way in blockchain
 
 ### Text tutorial
 
-* [TON Onboarding Challenge](https://github.com/ton-society/ton-footsteps/issues/128)
+* [TON Onboarding Challenge](https://ton.org/docs/develop/onboarding-challenge)
 
 
 
-## Mining process (advanced)
+## Mining process (deep dive)
+
+> Feel free to use a text version of tutorial to get help 
 
 This is a NFT collection that differs from standard NFT collections in the following aspects:
 
